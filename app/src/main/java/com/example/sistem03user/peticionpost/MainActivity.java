@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText mailEt = (EditText) findViewById(R.id.et_title);
-        //final EditText bodyEt = (EditText) findViewById(R.id.et_body);
         Button submitBtn = (Button) findViewById(R.id.btn_submit);
         mResponseTv = (TextView) findViewById(R.id.tv_response);
 
@@ -38,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = mailEt.getText().toString().trim();
-               // String body = bodyEt.getText().toString().trim();
-               // if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(body)) {
+
                 if(!TextUtils.isEmpty(email)) {
-                    //sendPost(email, body);
 
                     sendPost(email);
+                    //ordenando datos
                 }
             }
         });
