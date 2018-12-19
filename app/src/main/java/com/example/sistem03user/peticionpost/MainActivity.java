@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     //private void sendPost(String email, String body) {
     private void sendPost(String email) {
-        mAPIService.savePost(email).enqueue(new Callback<Post>() {
+        mAPIService.obtenerUsuario(email).enqueue(new Callback<Post>() {
             @Override
             public void onResponse(Call<Post> call, Response<Post> response) {
 
