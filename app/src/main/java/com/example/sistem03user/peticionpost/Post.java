@@ -11,10 +11,10 @@ public class Post {
     private String turnoNombre;
     @SerializedName("grado_id")
     @Expose
-    private String gradoId;
+    private Integer gradoId;
     @SerializedName("turno_id")
     @Expose
-    private String turnoId;
+    private Integer turnoId;
     @SerializedName("sede_nombre")
     @Expose
     private String sedeNombre;
@@ -23,34 +23,37 @@ public class Post {
     private String nivelNombre;
     @SerializedName("matricula_id")
     @Expose
-    private String matriculaId;
+    private Integer matriculaId;
     @SerializedName("persona_apellido_materno")
     @Expose
     private String personaApellidoMaterno;
     @SerializedName("anio_id")
     @Expose
-    private String anioId;
+    private Integer anioId;
     @SerializedName("persona_nombre")
     @Expose
     private String personaNombre;
     @SerializedName("anio_nombre")
     @Expose
     private String anioNombre;
+    @SerializedName("persona_correo_direccion")
+    @Expose
+    private String personaCorreoDireccion;
     @SerializedName("grado_nombre")
     @Expose
     private String gradoNombre;
     @SerializedName("sede_id")
     @Expose
-    private String sedeId;
+    private Integer sedeId;
     @SerializedName("nivel_id")
     @Expose
-    private String nivelId;
+    private Integer nivelId;
     @SerializedName("persona_id")
     @Expose
-    private String personaId;
+    private Integer personaId;
     @SerializedName("matricula_retirado")
     @Expose
-    private String matriculaRetirado;
+    private Boolean matriculaRetirado;
     @SerializedName("persona_apellido_paterno")
     @Expose
     private String personaApellidoPaterno;
@@ -63,19 +66,19 @@ public class Post {
         this.turnoNombre = turnoNombre;
     }
 
-    public String getGradoId() {
+    public Integer getGradoId() {
         return gradoId;
     }
 
-    public void setGradoId(String gradoId) {
+    public void setGradoId(Integer gradoId) {
         this.gradoId = gradoId;
     }
 
-    public String getTurnoId() {
+    public Integer getTurnoId() {
         return turnoId;
     }
 
-    public void setTurnoId(String turnoId) {
+    public void setTurnoId(Integer turnoId) {
         this.turnoId = turnoId;
     }
 
@@ -95,11 +98,11 @@ public class Post {
         this.nivelNombre = nivelNombre;
     }
 
-    public String getMatriculaId() {
+    public Integer getMatriculaId() {
         return matriculaId;
     }
 
-    public void setMatriculaId(String matriculaId) {
+    public void setMatriculaId(Integer matriculaId) {
         this.matriculaId = matriculaId;
     }
 
@@ -111,11 +114,11 @@ public class Post {
         this.personaApellidoMaterno = personaApellidoMaterno;
     }
 
-    public String getAnioId() {
+    public Integer getAnioId() {
         return anioId;
     }
 
-    public void setAnioId(String anioId) {
+    public void setAnioId(Integer anioId) {
         this.anioId = anioId;
     }
 
@@ -135,6 +138,14 @@ public class Post {
         this.anioNombre = anioNombre;
     }
 
+    public String getPersonaCorreoDireccion() {
+        return personaCorreoDireccion;
+    }
+
+    public void setPersonaCorreoDireccion(String personaCorreoDireccion) {
+        this.personaCorreoDireccion = personaCorreoDireccion;
+    }
+
     public String getGradoNombre() {
         return gradoNombre;
     }
@@ -143,35 +154,35 @@ public class Post {
         this.gradoNombre = gradoNombre;
     }
 
-    public String getSedeId() {
+    public Integer getSedeId() {
         return sedeId;
     }
 
-    public void setSedeId(String sedeId) {
+    public void setSedeId(Integer sedeId) {
         this.sedeId = sedeId;
     }
 
-    public String getNivelId() {
+    public Integer getNivelId() {
         return nivelId;
     }
 
-    public void setNivelId(String nivelId) {
+    public void setNivelId(Integer nivelId) {
         this.nivelId = nivelId;
     }
 
-    public String getPersonaId() {
+    public Integer getPersonaId() {
         return personaId;
     }
 
-    public void setPersonaId(String personaId) {
+    public void setPersonaId(Integer personaId) {
         this.personaId = personaId;
     }
 
-    public String getMatriculaRetirado() {
+    public Boolean getMatriculaRetirado() {
         return matriculaRetirado;
     }
 
-    public void setMatriculaRetirado(String matriculaRetirado) {
+    public void setMatriculaRetirado(Boolean matriculaRetirado) {
         this.matriculaRetirado = matriculaRetirado;
     }
 
@@ -188,20 +199,21 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "turnoNombre='" + turnoNombre + '\'' +
-                ", gradoId='" + gradoId + '\'' +
-                ", turnoId='" + turnoId + '\'' +
+                ", gradoId=" + gradoId +
+                ", turnoId=" + turnoId +
                 ", sedeNombre='" + sedeNombre + '\'' +
                 ", nivelNombre='" + nivelNombre + '\'' +
-                ", matriculaId='" + matriculaId + '\'' +
+                ", matriculaId=" + matriculaId +
                 ", personaApellidoMaterno='" + personaApellidoMaterno + '\'' +
-                ", anioId='" + anioId + '\'' +
+                ", anioId=" + anioId +
                 ", personaNombre='" + personaNombre + '\'' +
                 ", anioNombre='" + anioNombre + '\'' +
+                ", personaCorreoDireccion='" + personaCorreoDireccion + '\'' +
                 ", gradoNombre='" + gradoNombre + '\'' +
-                ", sedeId='" + sedeId + '\'' +
-                ", nivelId='" + nivelId + '\'' +
-                ", personaId='" + personaId + '\'' +
-                ", matriculaRetirado='" + matriculaRetirado + '\'' +
+                ", sedeId=" + sedeId +
+                ", nivelId=" + nivelId +
+                ", personaId=" + personaId +
+                ", matriculaRetirado=" + matriculaRetirado +
                 ", personaApellidoPaterno='" + personaApellidoPaterno + '\'' +
                 '}';
     }

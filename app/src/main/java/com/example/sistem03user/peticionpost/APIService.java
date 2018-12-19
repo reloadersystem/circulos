@@ -15,8 +15,8 @@ public interface APIService {
 //    Call<Post> savePost(@Field("turno_nombre") String turno_nombre);
 
 
-    @GET("/FacturacionElectronicaSIIAA/api/v1/estudiante/obtenerDatos/{persona_nombre}")
+    @GET("FacturacionElectronicaSIIAA/api/v1/estudiante/obtenerDatos/{persona_correo_direccion}")
     @Headers("Content-Type: application/json")
-    Call<Post> obtenerUsuario(@Path("persona_nombre") String usuarioRequest);
+    Call<Post> obtenerUsuario(@Path("persona_correo_direccion") String persona_correo_direccion);
 
 }

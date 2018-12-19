@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(email)) {
                     //sendPost(email, body);
 
-
-
                     sendPost(email);
                 }
             }
